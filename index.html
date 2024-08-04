@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <label>
+            Nome:
+            <textarea id="nome" oninput="expandInput(this)"></textarea>
+        </label>
+        <label>
+            Raça:
+            <textarea id="raca" oninput="expandInput(this)"></textarea>
+        </label>
+        <label>
+            Data de Nascimento:
+            <textarea id="data_nascimento" oninput="expandInput(this)"></textarea>
+        </label>
+        <label>
+            Vacinas Tomadas:
+            <textarea id="vacinas" oninput="expandInput(this)"></textarea>
+        </label>
+        <div class="gender-options">
+            <button class="female" onclick="selectGender('female')">Fêmea</button>
+            <button class="male" onclick="selectGender('male')">Macho</button>
+        </div>
+        <div class="female-options" id="female-options">
+            <label>
+                Número de Filhotes:
+                <textarea id="num_filhotes" oninput="expandInput(this)"></textarea>
+            </label>
+            <label>
+                Data de nascimento dos filhotes:
+                <textarea id="data_cios" oninput="expandInput(this)"></textarea>
+            </label>
+        </div>
+        <div class="gender-status" id="gender-status">
+            <label>
+                <input type="radio" name="castration" value="castrado"> Castrado
+            </label>
+            <label>
+                <input type="radio" name="castration" value="nao_castrado"> Não Castrado
+            </label>
+        </div>
+        <div class="button-container">
+            <button id="save-button" onclick="saveAllData()">Salvar dados dos animais</button>
+            <button id="delete-button" onclick="deleteAllData()">Apagar dados dos animais</button>
+        </div>
+        <div id="qrcode" style="margin-top: 20px;"></div>
+        <div id="link-id" style="margin-top: 10px;"></div> <!-- Link para o ID -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
