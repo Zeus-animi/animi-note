@@ -25,7 +25,7 @@ Este é um projeto de um bloco de notas para registrar informações sobre anima
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/Zeus-animi/animi-note.git
     ```
 2. Navegue até o diretório do projeto:
     ```bash
